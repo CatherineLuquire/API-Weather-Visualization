@@ -1,0 +1,14 @@
+h4 {
+    text-align: center;
+    color: rgba(0,0,0,.5);
+}
+.capt {
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    font-style: italic;
+    font-size: 10pt
+}
+
+.row {
+    background-color: white
+}
