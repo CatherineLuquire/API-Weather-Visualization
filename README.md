@@ -43,6 +43,14 @@ Create api_keys.py file within same directory as Jupyter Notebook files to store
 ### Weather API Calls and Data Cleaning
 1. Use citypy and numpy to find cities closest to randomly generated latitude and longitude coordinates. Loop through cities, performing API calls and appending relevant data to empty lists.
 ![weather API call](assets/images/api_call.png)
+2. Create a dictionary from the newly generated lists of data nd convert to dataframe. Clean data to get it in workable condition.
+![data cleaning](assets/images/data_cleaning.png)
+3. Export dataframe to a CSV for weather plots. Drop data with humidity over 100% and save to a separate CSV for vacation exploration.
+
+### Weather Plotting
+1. Import csv file from previous step and write function to create plots comparing latitude and weather measurements, and function to compare weather measurements by hemisphere and absolute latitude with linear regression.
+![plot function](assets/images/plot_function.png)
+
 
 ## Contact
 1. [Katy Luquire](https://github.com/CatherineLuquire)
