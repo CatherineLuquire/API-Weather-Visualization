@@ -45,11 +45,20 @@ Create api_keys.py file within same directory as Jupyter Notebook files to store
 ![weather API call](assets/images/api_call.png)
 2. Create a dictionary from the newly generated lists of data nd convert to dataframe. Clean data to get it in workable condition.
 ![data cleaning](assets/images/data_cleaning.png)
-3. Export dataframe to a CSV for weather plots. Drop data with humidity over 100% and save to a separate CSV for vacation exploration.
+3. Export dataframe to a CSV.
 
 ### Weather Plotting
 1. Import csv file from previous step and write function to create plots comparing latitude and weather measurements, and function to compare weather measurements by hemisphere and absolute latitude with linear regression.
 ![plot function](assets/images/plot_function.png)
+
+### Vacation Planning with Google Maps
+
+1. Import csv file from step 1 into dataframe and use gmaps to create heatmap to show places with high humidity.
+2. Clean dataframe to find cities with temperature between 70-80 degress, clear skies, windspeed less than 10mph, and less than 100% humidity. Loop through dataframe, performing API calls with gmaps to find hotels within 5000 meters of the geocoordinates and add to dataframe.
+![gmaps API call](assets/images/gmap_api_call.png)
+3. Use newly generated hotel info to 
+
+
 
 
 ## Contact
