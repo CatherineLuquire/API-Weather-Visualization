@@ -1,14 +1,15 @@
 # API Weather Visualization with Python
 
-I created a website that compares longitudinal observations of temperature, wind speed, humiditiy, and cloudiness, then I used all the data I collected to find the vacation spots with the perfect weather. 
+I created a website that compares longitudinal observations of temperature, wind speed, humiditiy, and cloudiness, then used the data I collected to find the vacation spots with the perfect weather. 
 
 Website hosted by github pages:
 https://catherineluquire.github.io/API-Weather-Visualization/
 
+![Hotel Map](assets/images/hotel_map.png)
 
 * [Technologies](#technologies)
 * [Data Sources](#data-sources)
-* [Installation](#installation)
+* [Installation](#installation-and-usage)
 * [Development Process](#development-process)
 * [Contact](#contact)
 
@@ -25,11 +26,13 @@ https://catherineluquire.github.io/API-Weather-Visualization/
   * scipy.stats 
     * linregress
   * citipy
-  * gmaps
   * ipywidgets.embed 
     * embed_minimal_html
   * os
-  
+ * Gmaps
+ * HTML/CSS
+  * Bootstrap
+ 
 
 ## Data Sources
 * [Open Weather Map API](https://openweathermap.org/api)
@@ -39,26 +42,27 @@ https://catherineluquire.github.io/API-Weather-Visualization/
 Create api_keys.py file within same directory as Jupyter Notebook files to store personal API keys. Within Jupyter Notebooks, from  api_keys import weather_api_key and import g_key.
 
 ## Development Process
-
-### Weather API Calls and Data Cleaning
+### Data Collection, Cleaning, and Visualizations
+#### Weather API Calls and Data Cleaning
 1. Use citypy and numpy to find cities closest to randomly generated latitude and longitude coordinates. Loop through cities, performing API calls and appending relevant data to empty lists.
-![weather API call](assets/images/api_call.png)
-2. Create a dictionary from the newly generated lists of data nd convert to dataframe. Clean data to get it in workable condition.
-![data cleaning](assets/images/data_cleaning.png)
+2. Create a dictionary from the newly generated lists of data and convert to dataframe. Clean data to get it in workable condition.
 3. Export dataframe to a CSV.
 
-### Weather Plotting
+#### Weather Plotting
 1. Import csv file from previous step and write function to create plots comparing latitude and weather measurements, and function to compare weather measurements by hemisphere and absolute latitude with linear regression.
-![plot function](assets/images/plot_function.png)
+![Plot Function](assets/images/plot_function.png)
+![Temperature Plot](assets/images/fig0.png)
 
-### Vacation Planning with Google Maps
 
-1. Import csv file from step 1 into dataframe and use gmaps to create heatmap to show places with high humidity.
+#### Vacation Planning with Google Maps
+1. Import csv file from step 1 into dataframe and use gmaps to create heatmap to visualize high humidity. Save map as figure. 
+![Humidity Heat Map](assets/images/heatmap.png)
 2. Clean dataframe to find cities with temperature between 70-80 degress, clear skies, windspeed less than 10mph, and less than 100% humidity. Loop through dataframe, performing API calls with gmaps to find hotels within 5000 meters of the geocoordinates and add to dataframe.
-![gmaps API call](assets/images/gmap_api_call.png)
-3. Use newly generated hotel info to 
+3. Use newly generated hotel info to add hotel markers to the heatmap containing hotel name, city, and country. Save map as figure. 
 
+### Website Development
 
+Use HTML, CSS, and bootstrap to build website using previously created charts and maps. Deploy via Github Pages. 
 
 
 ## Contact
