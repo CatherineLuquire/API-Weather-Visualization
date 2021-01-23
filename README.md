@@ -62,7 +62,7 @@ Create api_keys.py file within same directory as Jupyter Notebook files to store
 
 ### Website Development
 
-Use HTML, CSS, and bootstrap to build website using previously created charts and maps. Deploy via Github Pages. 
+Use HTML, CSS, and bootstrap to build website exploring previously created charts and maps, including an HTML data table. Deploy via Github Pages. 
 
 
 ## Contact
